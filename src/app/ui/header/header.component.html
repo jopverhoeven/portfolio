@@ -1,0 +1,20 @@
+<nav class="navbar navbar-dark bg-dark mb-5">
+  <a class="navbar-brand" href="/">Jop Verhoeven</a>
+  <div class="navbar-expand mr-auto">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" [matMenuTriggerFor]="menu">Projecten</a>
+
+        <mat-menu #menu="matMenu">
+          <a target="_blank" href="http://fonstagram.jopverhoeven.nl" class="toolbar-item"><button mat-menu-item>FonstaGram</button></a>
+          <button mat-menu-item>LoLLookup</button>
+        </mat-menu>
+    </div>
+  </div>
+  <div class="navbar-expand ml-auto navbar-nav">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/jopverhoeven" target="_blank">
+        <i class="fa fa-github"></i>
+      </a>
+    </div>
+  </div>
+</nav>

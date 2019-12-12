@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { MeComponent } from './about/me/me.component';
 import { FonstagramComponent } from './about/fonstagram/fonstagram.component';
 import { LollookupComponent } from './about/lollookup/lollookup.component';
+import { UiModule } from './ui/ui.module';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { LollookupComponent } from './about/lollookup/lollookup.component';
     MatMenuModule,
     MatButtonModule,
     MatCardModule,
+    UiModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
