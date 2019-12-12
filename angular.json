@@ -30,7 +30,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "http://jopverhoeven.nl/",
+              "baseHref": "https://jopverhoeven.nl/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
