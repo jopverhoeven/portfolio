@@ -4,13 +4,23 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatToolbarModule, MatMenuModule, MatButtonModule, } from '@angular/material/';
+import { MatToolbarModule, MatMenuModule, MatButtonModule, MatCardModule, } from '@angular/material/';
 import { RouterModule, Routes } from '@angular/router';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { AboutComponent } from './about/about.component';
+import { MeComponent } from './about/me/me.component';
+import { FonstagramComponent } from './about/fonstagram/fonstagram.component';
+import { LollookupComponent } from './about/lollookup/lollookup.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToolbarComponent,
+    AboutComponent,
+    MeComponent,
+    FonstagramComponent,
+    LollookupComponent
   ],
   imports: [
     BrowserModule,
@@ -18,10 +28,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 
-    //Material Components
+    // Material Components
     MatToolbarModule,
     MatMenuModule,
     MatButtonModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+<mat-toolbar class="toolbar">
+  <mat-toolbar-row>
+    <span><b>jopverhoeven.nl</b></span>
+    <span></span>
+    <span>
+      <button mat-button>Over Mij</button>
+      <button mat-button [matMenuTriggerFor]="menu">Projecten</button>
+      <mat-menu #menu="matMenu">
+          <a target="_blank" href="http://fonstagram.jopverhoeven.nl" class="toolbar-item"><button mat-menu-item>FonstaGram</button></a>
+          <button mat-menu-item>LoLLookup</button>
+        </mat-menu>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>
