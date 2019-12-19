@@ -1,8 +1,8 @@
-<app-header (toggleSideBarForMe)="sideBarToggler($event)"></app-header>
+<app-header (toggleSideBarForMe)="sideBarToggler()"></app-header>
 
 <mat-drawer-container>
   <mat-drawer mode="over" [opened]="sideBarOpen">
-    <app-sidebar (toggleSideBarForMe)="sideBarToggler($event)"></app-sidebar>
+    <app-sidebar (toggleSideBarForMe)="sideBarToggler()"></app-sidebar>
   </mat-drawer>
   <mat-drawer-content>
     <router-outlet></router-outlet>
