@@ -1,38 +1,20 @@
+import { DefaultModule } from './layout/default/default.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { MatToolbarModule, MatMenuModule, MatButtonModule, MatCardModule, } from '@angular/material/';
-import { RouterModule, Routes } from '@angular/router';
-import { ToolbarComponent } from './toolbar/toolbar.component';
-import { AboutComponent } from './about/about.component';
-import { MeComponent } from './about/me/me.component';
-import { FonstagramComponent } from './about/fonstagram/fonstagram.component';
-import { LollookupComponent } from './about/lollookup/lollookup.component';
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent,
-    AboutComponent,
-    MeComponent,
-    FonstagramComponent,
-    LollookupComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
-
-
-
-    // Material Components
-    MatToolbarModule,
-    MatMenuModule,
-    MatButtonModule,
-    MatCardModule,
+    DefaultModule
   ],
   providers: [],
   bootstrap: [AppComponent]
