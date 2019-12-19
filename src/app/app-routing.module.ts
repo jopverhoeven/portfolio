@@ -1,3 +1,4 @@
+import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { DefaultComponent } from './layout/default/default.component';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,9 @@ const routes: Routes = [{
   children: [{
     path: '',
     component: HomeComponent
+  }, {
+    path: 'about',
+    component: AboutComponent,
   }]
 }];
 

@@ -1,3 +1,4 @@
+import { AboutComponent } from './../../components/about/about.component';
 import { HomeComponent } from './../../components/home/home.component';
 import { DefaultComponent } from './default.component';
 import { SharedModule } from './../../shared/shared.module';
@@ -12,7 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     DefaultComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
   ],
   imports: [
     CommonModule,
