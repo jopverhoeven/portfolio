@@ -1,22 +1,22 @@
-<div style="position: sticky; top: 0;" fxLayout="row" *ngIf="isMobile">
+<div style="position: sticky; top: 0; z-index: 100; background-color: white;" fxLayout="row" *ngIf="isMobile">
   <button mat-icon-button (click)="sideBarToggler()">
     <mat-icon>menu</mat-icon>
   </button>
   <p class="mat-h1 header" style="padding-top: 5px;">JopVerhoeven.nl</p>
 </div>
-<mat-sidenav-container *ngIf="!isMobile" fxFlexFill>
-  <mat-sidenav [opened]="true" mode="side">
+<mat-drawer-container [hasBackdrop]="false" *ngIf="!isMobile" fxFlexFill>
+  <mat-drawer mode="side" [opened]="true">
     <app-sidebar></app-sidebar>
-  </mat-sidenav>
-  <mat-sidenav-content style="padding: 20px;">
+  </mat-drawer>
+  <mat-drawer-content fxFlex >
     <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  </mat-drawer-content>
+</mat-drawer-container>
 <mat-drawer-container [hasBackdrop]="false" *ngIf="isMobile" fxFlexFill>
   <mat-drawer mode="over" [opened]="sideBarOpen">
     <app-sidebar (toggleSideBarForMe)="sideBarToggler()"></app-sidebar>
   </mat-drawer>
-  <mat-drawer-content style="padding-top: 0;">
+  <mat-drawer-content style="padding-top: 0;" fxFlex>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>

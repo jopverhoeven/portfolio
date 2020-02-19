@@ -1,6 +1,8 @@
 <div fxFlexFill fxLayout="column">
   <h1 class="mat-display-1" style="margin-bottom: 20px; ">Welcome to JopVerhoeven.nl</h1>
-  <a mat-icon-button matTooltip="GitHub Profile" href="https://www.github.com/jopverhoeven"><mat-icon>code</mat-icon></a>
+  <a mat-icon-button matTooltip="GitHub Profile" href="https://www.github.com/jopverhoeven">
+    <mat-icon>code</mat-icon>
+  </a>
   <h1 class="mat-h1" style="margin-top: 20px">About me</h1>
   <div fxLayout="column">
     <p class="mat-h3" [ngClass.gt-sm]="'intro'">
@@ -9,10 +11,10 @@
       I go to school at Fontys University of Applied Sciences in Eindhoven,
       where I've been studying for about 2.5 years now.
       <br><br>
-      When I'm not designing or programming, I enjoy reading, playing video games and hanging out with friends.
+      When I'm not designing or programming, you can find me reading, playing video games or hanging out with friends.
     </p>
     <p class="mat-h3"></p>
-    <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="150px"  fxLayoutGap.lt-sm="5px">
+    <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="150px" fxLayoutGap.lt-sm="5px">
       <div fxLayout="column">
         <h1 class="mat-h1">Education</h1>
         <p class="mat-h3">
@@ -32,42 +34,73 @@
           </mat-list>
         </p>
       </div>
-      <div fxLayout="column">
-        <h1 class="mat-h1">Skills</h1>
-        <div fxLayout="row" fxLayoutGap="40px">
-          <div fxLayout="column">
-            <mat-list>
-              <h2 matSubheader><mat-icon>code</mat-icon> Programming Languages</h2>
-              <mat-list-item>Java</mat-list-item>
-              <mat-list-item>C#</mat-list-item>
-              <mat-list-item>TypeScript / JavaScript</mat-list-item>
-            </mat-list>
+      <div fxLayout="row">
+        <div fxLayout="column">
+          <div fxLayout="row">
+            <h1 class="mat-h1">Skills</h1>
           </div>
-          <div fxLayout="column">
-            <mat-list>
-              <h2 matSubheader><mat-icon>dashboard</mat-icon> Frameworks</h2>
-              <mat-list-item>Angular</mat-list-item>
-              <mat-list-item>Vue.js</mat-list-item>
-              <mat-list-item>ASP.Net Core</mat-list-item>
-            </mat-list>
+          <div fxLayout="row" fxLayoutGap="20px">
+            <div fxLayout="column" fxLayoutGap="20px">
+              <div fxLayout="row">
+                <mat-list>
+                  <h2 matSubheader class="skill-title">
+                    <mat-icon>code</mat-icon> Programming Languages
+                  </h2>
+                  <mat-list-item>Java</mat-list-item>
+                  <mat-list-item>C#</mat-list-item>
+                  <mat-list-item>TypeScript / JavaScript</mat-list-item>
+                </mat-list>
+              </div>
+              <div fxLayout="row">
+                <mat-list>
+                  <h2 matSubheader class="skill-title">
+                    <mat-icon>category</mat-icon> Frameworks
+                  </h2>
+                  <mat-list-item>Angular</mat-list-item>
+                  <mat-list-item>Vue.js</mat-list-item>
+                  <mat-list-item>ASP.Net Core</mat-list-item>
+                </mat-list>
+              </div>
+            </div>
+            <div fxLayout="column" fxLayoutGap="20px">
+              <div fxLayout="row">
+                <mat-list>
+                  <h2 matSubheader class="skill-title">
+                    <mat-icon>device_hub</mat-icon> Tools
+                  </h2>
+                  <mat-list-item>Docker</mat-list-item>
+                  <mat-list-item>Git</mat-list-item>
+                  <mat-list-item>CI/CD</mat-list-item>
+                </mat-list>
+              </div>
+              <div fxLayout="row">
+                <mat-list>
+                  <h2 matSubheader class="skill-title">
+                    <mat-icon>language</mat-icon> Languages
+                  </h2>
+                  <mat-list-item>Dutch</mat-list-item>
+                  <mat-list-item>English</mat-list-item>
+                </mat-list>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <h1 class="mat-h1" style="margin-top: 5px;">My projects</h1>
+    <div fxLayout="row" fxLayoutGap="5px">
+      <mat-card style="width: 200px;" *ngFor="let project of projects" [routerLink]="['/project/' + project.URL]">
+        <mat-card-header>
+          <mat-card-title>
+            {{project.title}}
+          </mat-card-title>
+          <mat-card-subtitle>
+            {{project.description}}
+          </mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{project.image}}" />
+      </mat-card>
+    </div>
+    <br/>
+    <br/>
   </div>
-  <h1 class="mat-h1" style="margin-top: 5px;">My projects</h1>
-  <div fxLayout="row" fxLayoutGap="5px">
-    <mat-card style="width: 200px;" *ngFor="let project of projects" [routerLink]="['/project/' + project.URL]">
-      <mat-card-header>
-        <mat-card-title>
-          {{project.title}}
-        </mat-card-title>
-        <mat-card-subtitle>
-          {{project.description}}
-        </mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="{{project.image}}"/>
-    </mat-card>
-  </div>
-</div>
-
