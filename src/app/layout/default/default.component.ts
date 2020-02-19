@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-default',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefaultComponent implements OnInit {
   sideBarOpen = false;
+  isMobile = false;
 
-  constructor() { }
+  constructor(
+    private deviceService: DeviceDetectorService
+  ) {
+    this.isMobile = deviceService.isMobile();
+  }
 
   ngOnInit() {
   }
@@ -16,5 +22,4 @@ export class DefaultComponent implements OnInit {
   sideBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
   }
-
 }

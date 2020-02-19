@@ -1,1 +1,15 @@
-Welkom op jopverhoeven.nl
+<p>Welkom op jopverhoeven.nl</p>
+
+<div fxFlex fxLayout="row">
+  <mat-card *ngFor="let project of projects" style="max-width: 100px;" [routerLink]="['/project/' + project.URL]">
+    <mat-card-header>
+      <mat-card-title>
+        {{project.title}}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{project.description}}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{project.image}}"/>
+  </mat-card>
+</div>

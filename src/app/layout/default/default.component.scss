@@ -5,6 +5,7 @@
 }
 mat-drawer {
   width: 300px;
+  background-image: URL("https://www.linuxfoundation.org/wp-content/uploads/2016/12/lf_background_trees.jpg");
 }
 
 mat-drawer-container {
@@ -13,4 +14,8 @@ mat-drawer-container {
 
 mat-drawer-content {
   padding: 20px;
+}
+
+mat-sidenav {
+  background-image: URL("https://www.linuxfoundation.org/wp-content/uploads/2016/12/lf_background_trees.jpg");
 }

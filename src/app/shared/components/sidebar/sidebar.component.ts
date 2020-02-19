@@ -1,3 +1,5 @@
+import { CurrentProjects } from './../../../data/currentProjects';
+import { Project } from './../../../models/project';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -9,9 +11,13 @@ export class SidebarComponent implements OnInit {
 
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
 
+
+  projects: Project[];
+
   constructor() { }
 
   ngOnInit() {
+    this.projects = new CurrentProjects().getProjects();
   }
 
   toggleSideBar() {

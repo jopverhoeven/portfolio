@@ -1,6 +1,9 @@
+<p class="mat-h1 header" fxHide.lt-sm="true">JopVerhoeven.nl</p>
+<mat-divider></mat-divider>
 <mat-nav-list>
-  <a (click)="toggleSideBar()" mat-list-item routerLink="/">Home</a>
+  <mat-list-item (click)="toggleSideBar()" mat-list-item routerLink="/"><mat-icon>home</mat-icon>Home</mat-list-item>
   <h2 matSubheader>Projecten</h2>
-  <a (click)="toggleSideBar()" mat-list-item href="http://fonstagram.jopverhoeven.nl">FonstaGram</a>
+
+  <mat-list-item *ngFor="let project of projects" [routerLink]="['/project/'+project.URL]" (click)="toggleSideBar()">{{project.title}}</mat-list-item>
   <mat-divider></mat-divider>
 </mat-nav-list>
